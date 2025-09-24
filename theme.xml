@@ -232,7 +232,7 @@ license:      	creative commons CC-BY-NC-SA
 		</text>
 		<text name="game-platform">
 			<pos>0.04 0.615</pos>
-			<metadata>systemFullname</metadata>
+			<text>${systemName}</text>
 		</text>
 		<image name="game-platform-line">
 			<pos>0.04 0.645</pos>
