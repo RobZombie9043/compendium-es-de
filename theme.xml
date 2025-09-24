@@ -92,6 +92,7 @@ license:      	creative commons CC-BY-NC-SA
 			<itemSize>${sysGridItemSize}</itemSize>
 			<itemSpacing>${sysGridItemSpacing}</itemSpacing>
 			<staticImage>./_inc/systems/controllers/${system.theme}.png</staticImage>
+			<defaultImage>./_inc/systems/controllers/_default.png</defaultImage>
 			<itemScale>1.05</itemScale>
 			<imageRelativeScale>0.99</imageRelativeScale>
 			<scaleInwards>true</scaleInwards>
@@ -108,6 +109,7 @@ license:      	creative commons CC-BY-NC-SA
 			<pos>${sysIconPos}</pos>
 			<maxSize>${sysGridItemSize}</maxSize>
 			<path>./_inc/systems/icons/${system.theme}.png</path>
+			<default>./_inc/systems/icons/_default.png</default>
 			<mipmap>true</mipmap>
 			<zIndex>3</zIndex>
 		</image>
