@@ -50,7 +50,6 @@ license:      	creative commons CC-BY-NC-SA
 			<opacityDimmed>1.0</opacityDimmed>
 			<letterCase>capitalize</letterCase>
 			<scope>view</scope>
-			<entries>back,start,a,b,l,r,lt,rt,down,up,up/down,up/down/left/right,ltrt,lr</entries>
 		</helpsystem>
 		<systemstatus name="system-status">
 			<origin>1 0.5</origin>
@@ -101,7 +100,7 @@ license:      	creative commons CC-BY-NC-SA
 			<selectorColor>${pink}</selectorColor>
 			<selectorLayer>top</selectorLayer>
 			<textColor>000000</textColor>
-			<fontSize>0.03</fontSize>
+			<fontSize>${fontSizeBody}</fontSize>
 		</grid>
 		
 		<image name="system-icon">
@@ -114,17 +113,29 @@ license:      	creative commons CC-BY-NC-SA
 			<zIndex>3</zIndex>
 		</image>
 		
-		<text name="system-name">
+		<text name="systemName, autoCollectionName, customCollectionName">
 			<origin>1 1</origin>
 			<pos>${sysNamePos}</pos>
 			<size>${sysNameSizeX} 0.06</size>
-			<systemdata>fullname</systemdata>
 			<fontSize>${fontSizeH2}</fontSize>
 			<lineSpacing>1.2</lineSpacing>
 			<horizontalAlignment>right</horizontalAlignment>
 			<fontPath>${robotoBold}</fontPath>
 			<color>${purple}</color>
 		</text>
+		<text name="systemName">
+            <text>${system.fullName.noCollections}</text>
+            <letterCase>none</letterCase>
+        </text>
+        <text name="autoCollectionName">
+            <text>${system.fullName.autoCollections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+        <text name="customCollectionName">
+            <text>${system.fullName.customCollections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+
 		
 		<text name="system-name-suffix">
 			<origin>1 0</origin>
@@ -135,6 +146,9 @@ license:      	creative commons CC-BY-NC-SA
 			<fontPath>${robotoBold}</fontPath>
 			<color>${foreground}</color>
 		</text>
+		<helpsystem name="help">
+			<entries>start,a,x</entries>
+		</helpsystem>
 		
 	</view>
 	
@@ -292,11 +306,12 @@ license:      	creative commons CC-BY-NC-SA
 			<metadata>publisher</metadata>
 		</text>
 
+
 		<systemstatus name="system-status">
 			<backgroundColor>${background}</backgroundColor>
 			<backgroundVerticalPadding>0.00972 0.00972</backgroundVerticalPadding>
 		</systemstatus>
-
+		
 	</view>
 	
 	<!--
@@ -304,23 +319,30 @@ license:      	creative commons CC-BY-NC-SA
 	Font Size
 	///
 	-->
+	<fontSize name="small">
+		<variables>
+			<fontSizeH2>0.045</fontSizeH2>
+			<fontSizeH3>0.0325</fontSizeH3> 
+			<fontSizeBody>0.030</fontSizeBody>
+			<fontSizeIcons>0.0275</fontSizeIcons>			
+			<fontSizeCaption>0.020</fontSizeCaption>
+		</variables>
+	</fontSize>
 	<fontSize name="medium">
 		<variables>
-			<fontSizeH1>0.055</fontSizeH1>
-			<fontSizeH2>0.045</fontSizeH2>
-			<fontSizeH3>0.035</fontSizeH3> 
-			<fontSizeBody>0.030</fontSizeBody>
-			<fontSizeIcons>0.025</fontSizeIcons>			
-			<fontSizeCaption>0.020</fontSizeCaption>
+			<fontSizeH2>0.0475</fontSizeH2>
+			<fontSizeH3>0.035</fontSizeH3>
+			<fontSizeBody>0.0325</fontSizeBody>
+			<fontSizeIcons>0.030</fontSizeIcons> 
+			<fontSizeCaption>0.0225</fontSizeCaption>
 		</variables>
 	</fontSize>
 	<fontSize name="large">
 		<variables>
-			<fontSizeH1>0.060</fontSizeH1>
-			<fontSizeH2>0.050</fontSizeH2>
-			<fontSizeH3>0.040</fontSizeH3>
+			<fontSizeH2>0.05</fontSizeH2>
+			<fontSizeH3>0.0375</fontSizeH3>
 			<fontSizeBody>0.035</fontSizeBody>
-			<fontSizeIcons>0.030</fontSizeIcons> 
+			<fontSizeIcons>0.0325</fontSizeIcons> 
 			<fontSizeCaption>0.025</fontSizeCaption>
 		</variables>
 	</fontSize>
@@ -332,14 +354,20 @@ license:      	creative commons CC-BY-NC-SA
 	-->
 	<aspectRatio name="1:1">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00694 0.00694</backgroundHorizontalPadding>
-			</systemstatus>			
+			</systemstatus>
 		</view>
     </aspectRatio>
 	
 	<aspectRatio name="5:4">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00556 0.00556</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -348,6 +376,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="4:3">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00521 0.00521</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -356,6 +387,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="3:2">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00463 0.00463</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -364,6 +398,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="16:10">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00434 0.00434</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -372,6 +409,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="16:9">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00391 0.00391</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -380,6 +420,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="19.5:9">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00321 0.00321</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -388,6 +431,9 @@ license:      	creative commons CC-BY-NC-SA
 	
 	<aspectRatio name="21:9">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00298 0.00298</backgroundHorizontalPadding>
 			</systemstatus>			
@@ -396,6 +442,9 @@ license:      	creative commons CC-BY-NC-SA
 
     <aspectRatio name="8:7">
         <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
 			<systemstatus name="system-status">
 				<backgroundHorizontalPadding>0.00605 0.00605</backgroundHorizontalPadding>
 			</systemstatus>			

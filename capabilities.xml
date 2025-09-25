@@ -23,6 +23,7 @@
 	Font Size
 	///
 	-->
+	<fontSize>small</fontSize>
 	<fontSize>medium</fontSize>
 	<fontSize>large</fontSize>
 	
