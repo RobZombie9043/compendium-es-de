@@ -292,6 +292,11 @@ license:      	creative commons CC-BY-NC-SA
 			<metadata>publisher</metadata>
 		</text>
 
+		<systemstatus name="system-status">
+			<backgroundColor>${background}</backgroundColor>
+			<backgroundVerticalPadding>0.00972 0.00972</backgroundVerticalPadding>
+		</systemstatus>
+
 	</view>
 	
 	<!--
@@ -319,4 +324,82 @@ license:      	creative commons CC-BY-NC-SA
 			<fontSizeCaption>0.025</fontSizeCaption>
 		</variables>
 	</fontSize>
+	
+	<!--
+	///
+	Aspect Ratios
+	///
+	-->
+	<aspectRatio name="1:1">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00694 0.00694</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="5:4">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00556 0.00556</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="4:3">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00521 0.00521</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="3:2">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00463 0.00463</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="16:10">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00434 0.00434</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="16:9">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00391 0.00391</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="19.5:9">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00321 0.00321</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="21:9">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00298 0.00298</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+
+    <aspectRatio name="8:7">
+        <view name="gamelist">
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00605 0.00605</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
 </theme>
