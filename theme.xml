@@ -66,16 +66,6 @@ license:      	creative commons CC-BY-NC-SA
 			<color>${foreground}</color>
 		</clock>
 	</view>
-	<view name="system">
-		<image name="system-background">
-			<stationary>always</stationary>
-		</image>
-	</view>
-	<view name="gamelist">
-		<image name="system-background">
-			<renderDuringTransitions>false</renderDuringTransitions>
-		</image>
-	</view>
 
 	<!--
 	///
