@@ -1,0 +1,38 @@
+<theme>
+	<colorScheme name="dracula">
+        <variables>
+			<background>282A36</background>		
+			<currentLine>6272A4</currentLine>	
+			<selection>44475A</selection>		
+			<foreground>F8F8F2</foreground>		
+			<comment>6272A4</comment>			
+			<red>FF5555</red>					
+			<orange>FFB86C</orange>				
+			<yellow>F1FA8C</yellow>				
+			<green>50FA7B</green>				
+			<cyan>8BE9FD</cyan>					
+			<purple>BD93F9</purple>				
+			<pink>FF79C6</pink>					
+			<floatingInteractiveElements>343746</floatingInteractiveElements>		
+			<palette>dracula</palette>
+		</variables>
+    </colorScheme>
+	<colorScheme name="alucard">
+        <variables>
+			<background>FFFBEB</background>		
+			<currentLine>6C664B</currentLine>	
+			<selection>CFCFDE</selection>		
+			<foreground>1F1F1F</foreground>		
+			<comment>6C664B</comment>			
+			<red>CB3A2A</red>				
+			<orange>A34D14</orange>				
+			<yellow>846E15</yellow>				
+			<green>14710A</green>				
+			<cyan>036A96</cyan>					
+			<purple>644AC9</purple>				
+			<pink>A3144D</pink>					
+			<floatingInteractiveElements>EFEDDC</floatingInteractiveElements>		
+			<palette>alucard</palette>
+		</variables>
+    </colorScheme>
+</theme>

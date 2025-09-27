@@ -1,0 +1,101 @@
+<theme>	
+	<aspectRatio name="1:1">	
+		<variables>	
+			<sysGridSize>0.7417 0.55</sysGridSize>
+			<sysGridItemSize>0.1666 0.1666</sysGridItemSize>
+			<sysGridItemSpacing>0.025 0.025</sysGridItemSpacing>
+			<sysIconPos>0.129167 0.703704</sysIconPos>
+			<sysNamePos>0.870833 0.787037</sysNamePos>
+			<sysNameSizeX>0.55</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="5:4">	
+		<variables>	
+			<sysGridSize>0.9001 0.55</sysGridSize>
+			<sysGridItemSize>0.1333 0.1666</sysGridItemSize>
+			<sysGridItemSpacing>0.02 0.025</sysGridItemSpacing>
+			<sysIconPos>0.05 0.703704</sysIconPos>
+			<sysNamePos>0.95 0.787037</sysNamePos>
+			<sysNameSizeX>0.746667</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="4:3">	
+		<variables>	
+			<sysGridSize>0.8438 0.55</sysGridSize>
+			<sysGridItemSize>0.1250 0.1666</sysGridItemSize>
+			<sysGridItemSpacing>0.01875 0.025</sysGridItemSpacing>
+			<sysIconPos>0.078125 0.703704</sysIconPos>
+			<sysNamePos>0.921875 0.787037</sysNamePos>
+			<sysNameSizeX>0.7</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="3:2">	
+		<variables>	
+			<sysGridSize>0.8352 0.4862</sysGridSize>
+			<sysGridItemSize>0.1537 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.016667 0.025</sysGridItemSpacing>
+			<sysIconPos>0.082407 0.639815</sysIconPos>
+			<sysNamePos>0.917593 0.755092</sysNamePos>
+			<sysNameSizeX>0.664815</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="16:10">	
+		<variables>	
+			<sysGridSize>0.7830 0.4862</sysGridSize>
+			<sysGridItemSize>0.1440 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.015625 0.025</sysGridItemSpacing>
+			<sysIconPos>0.108507 0.639815</sysIconPos>
+			<sysNamePos>0.891493 0.755092</sysNamePos>
+			<sysNameSizeX>0.623264</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="16:9">	
+		<variables>	
+			<sysGridSize>0.8485 0.4862</sysGridSize>
+			<sysGridItemSize>0.1296 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.014063 0.025</sysGridItemSpacing>
+			<sysIconPos>0.075781 0.639815</sysIconPos>
+			<sysNamePos>0.924219 0.755092</sysNamePos>
+			<sysNameSizeX>0.704688</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="19.5:9">	
+		<variables>	
+			<sysGridSize>0.814103 0.4862</sysGridSize>
+			<sysGridItemSize>0.1064 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.011538 0.025</sysGridItemSpacing>
+			<sysIconPos>0.092949 0.639815</sysIconPos>
+			<sysNamePos>0.907051 0.755092</sysNamePos>
+			<sysNameSizeX>0.696154</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="21:9">	
+		<variables>	
+			<sysGridSize>0.8655 0.4862</sysGridSize>
+			<sysGridItemSize>0.0988 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.010714 0.025</sysGridItemSpacing>
+			<sysIconPos>0.067262 0.639815</sysIconPos>
+			<sysNamePos>0.932738 0.755092</sysNamePos>
+			<sysNameSizeX>0.755952</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
+	<aspectRatio name="8:7">	
+		<variables>	
+			<sysGridSize>0.8130 0.55</sysGridSize>
+			<sysGridItemSize>0.1451 0.1666</sysGridItemSize>
+			<sysGridItemSpacing>0.021774 0.025</sysGridItemSpacing>
+			<sysIconPos>0.093548 0.703704</sysIconPos>
+			<sysNamePos>0.906452 0.787037</sysNamePos>
+			<sysNameSizeX>0.645968</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+
+</theme>	

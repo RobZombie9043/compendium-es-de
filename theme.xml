@@ -1,0 +1,480 @@
+<!--
+theme name: 	Compendium
+designed by:   	Rob Zombie
+license:      	creative commons CC-BY-NC-SA
+-->
+
+<theme>
+
+	<include>./_inc/systems/metadata-global/_default.xml</include>
+	<include>./_inc/systems/metadata-global/${system.theme}.xml</include>
+	<include>./_inc/systems/system-grid/system-grid.xml</include>
+
+	<variables>
+		<spacerImage>./_inc/images/space.png</spacerImage>
+		<robotoRegular>./_inc/fonts/Roboto-Regular.ttf</robotoRegular>
+		<robotoItalic>./_inc/fonts/Roboto-Italic.ttf</robotoItalic>
+		<robotoBold>./_inc/fonts/Roboto-Bold.ttf</robotoBold>
+	</variables>
+	<include>./colors.xml</include>
+	
+	<!--
+	///
+	All Views
+	///
+	-->
+	<view name="system,gamelist">
+		<image name="system-background">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>${spacerImage}</path>
+			<tile>true</tile>
+			<color>${background}</color>
+			<zIndex>1</zIndex>
+		</image>
+		<helpsystem name="help">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.955</pos>
+			<fontSize>${fontSizeBody}</fontSize>
+			<fontSizeDimmed>${fontSizeIcons}</fontSizeDimmed>
+			<fontPath>${robotoRegular}</fontPath>
+			<letterCase>capitalize</letterCase>
+			<iconColor>${purple}</iconColor>
+			<textColor>${foreground}</textColor>
+			<originDimmed>0.5 0</originDimmed>
+			<posDimmed>0.5 0.94</posDimmed>
+			<textColorDimmed>cccccc</textColorDimmed>
+			<iconColorDimmed>cccccc</iconColorDimmed>
+			<opacityDimmed>1.0</opacityDimmed>
+			<letterCase>capitalize</letterCase>
+			<scope>view</scope>
+		</helpsystem>
+		<systemstatus name="system-status">
+			<origin>1 0.5</origin>
+			<pos>0.982 0.045</pos>
+			<fontPath>${robotoRegular}</fontPath>
+			<height>${fontSizeIcons}</height>
+			<color>${foreground}</color>
+		</systemstatus>
+		<clock name="clock">
+			<origin>0 0.5</origin>
+			<pos>0.018 0.045</pos>
+			<fontPath>${robotoRegular}</fontPath>
+			<fontSize>${fontSizeIcons}</fontSize>
+			<color>${foreground}</color>
+		</clock>
+	</view>
+
+	<!--
+	///
+	System View - Carousel
+	///
+	-->
+	<view name="system">
+		
+		<grid name="system-grid">
+			<origin>0.5 0</origin>
+			<pos>0.5 0.1287035</pos>
+			<size>${sysGridSize}</size>
+			<itemSize>${sysGridItemSize}</itemSize>
+			<itemSpacing>${sysGridItemSpacing}</itemSpacing>
+			<staticImage>./_inc/systems/controllers/${system.theme}.png</staticImage>
+			<defaultImage>./_inc/systems/controllers/_default.png</defaultImage>
+			<itemScale>1.05</itemScale>
+			<imageRelativeScale>0.99</imageRelativeScale>
+			<scaleInwards>true</scaleInwards>
+			<fractionalRows>false</fractionalRows>
+			<selectorImage>./_inc/images/grid-selector.svg</selectorImage>
+			<selectorColor>${pink}</selectorColor>
+			<selectorLayer>top</selectorLayer>
+			<textColor>000000</textColor>
+			<fontSize>${fontSizeBody}</fontSize>
+		</grid>
+		
+		<image name="system-icon">
+			<origin>0 0</origin>
+			<pos>${sysIconPos}</pos>
+			<maxSize>${sysGridItemSize}</maxSize>
+			<path>./_inc/systems/icons/${system.theme}.png</path>
+			<default>./_inc/systems/icons/_default.png</default>
+			<mipmap>true</mipmap>
+			<zIndex>3</zIndex>
+		</image>
+		
+		<text name="systemName, autoCollectionName, customCollectionName">
+			<origin>1 1</origin>
+			<pos>${sysNamePos}</pos>
+			<size>${sysNameSizeX} 0.06</size>
+			<fontSize>${fontSizeH2}</fontSize>
+			<lineSpacing>1.2</lineSpacing>
+			<horizontalAlignment>right</horizontalAlignment>
+			<fontPath>${robotoBold}</fontPath>
+			<color>${purple}</color>
+		</text>
+		<text name="systemName">
+            <text>${system.fullName.noCollections}</text>
+            <letterCase>none</letterCase>
+        </text>
+        <text name="autoCollectionName">
+            <text>${system.fullName.autoCollections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+        <text name="customCollectionName">
+            <text>${system.fullName.customCollections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+
+		
+		<text name="system-name-suffix">
+			<origin>1 0</origin>
+			<pos>${sysNamePos}</pos>
+			<systemdata>gamecountGames</systemdata>
+			<fontSize>${fontSizeH2}</fontSize>
+			<lineSpacing>1.2</lineSpacing>
+			<fontPath>${robotoBold}</fontPath>
+			<color>${foreground}</color>
+		</text>
+		<helpsystem name="help">
+			<entries>start,a,x</entries>
+		</helpsystem>
+		
+	</view>
+	
+	
+	<!--
+	///
+	Gamelist View 
+	///
+	-->
+	<include>./_inc/systems/coversize/${systemCoverSize}.xml</include>
+	
+	<variant name="gamelist-screenshot, gamelist-video-instant, gamelist-video-delay">
+		<view name="gamelist">
+			<image name="game-background">
+				<origin>0 0</origin>
+				<pos>0.29 0</pos>
+				<cropSize>0.71 0.76</cropSize>
+				<cropPos>0.5 0.65</cropPos>
+				<imageType>screenshot</imageType>
+				<zIndex>2</zIndex>
+			</image>
+			<video name="game-background-video">
+				<origin>0 0</origin>
+				<pos>0.29 0</pos>
+				<cropSize>0.71 0.76</cropSize>
+				<cropPos>0.5 0.65</cropPos>
+				<imageType>screenshot</imageType>
+				<onIterationsDone>image</onIterationsDone>
+				<iterationCount>1</iterationCount>
+				<delay>0</delay>
+				<zIndex>2</zIndex>
+			</video>
+			<image name="game-background-mask">
+				<origin>0 0</origin>
+				<pos>0.29 0</pos>
+				<cropSize>0.71 1</cropSize>
+				<path>./_inc/images/carousel-background.png</path>
+				<color>${background}</color>
+				<zIndex>3</zIndex>
+			</image>
+			<carousel name="game-carousel">
+				<origin>0 0</origin>
+				<pos>0.27 0</pos>
+				<size>1 0.91</size>
+				<unfocusedItemOpacity>1</unfocusedItemOpacity>
+				<imageType>cover</imageType>
+				<fastScrolling>true</fastScrolling>
+				<color>00000000</color>
+				<textColor>${foreground}</textColor>
+				<textBackgroundColor>${floatingInteractiveElements}</textBackgroundColor>
+				<fontSize>${fontSizeBody}</fontSize>
+				<textRelativeScale>0.9</textRelativeScale>
+				<lineSpacing>1.25</lineSpacing>
+				<itemVerticalAlignment>bottom</itemVerticalAlignment>
+			</carousel>
+			
+			<text name="game-name">
+				<origin>0 1</origin>
+				<pos>0.04 0.2</pos>
+				<size>0.21 0.13</size>
+				<verticalAlignment>bottom</verticalAlignment>
+				<metadata>name</metadata>
+				<color>${purple}</color>			
+				<fontSize>${fontSizeH3}</fontSize>
+				<lineSpacing>1.05</lineSpacing>
+				<fontPath>${robotoBold}</fontPath>
+			</text>
+			
+			<text name="game-description">
+				<origin>0 0</origin>
+				<pos>0.04 0.21</pos>
+				<size>0.21 0.31</size>
+				<metadata>description</metadata>
+				<color>${foreground}</color>
+				<fontSize>${fontSizeCaption}</fontSize>
+				<lineSpacing>1.1</lineSpacing>
+				<fontPath>${robotoRegular}</fontPath>
+			</text>
+			
+			<text name="game-platform-label, game-platform, game-releasedate-label, game-genre-label, game-genre, game-developer-label, game-developer, game-publisher-label, game-publisher">
+				<size>0.21 0.02</size>
+				<color>${foreground}</color>
+				<fontSize>${fontSizeCaption}</fontSize>
+				<lineSpacing>1.1</lineSpacing>
+			</text>
+			
+			<text name="game-platform-label, game-releasedate-label, game-genre-label, game-developer-label, game-publisher-label">
+				<origin>0 1</origin>
+				<fontPath>${robotoBold}</fontPath>
+			</text>
+			
+			<text name="game-platform, game-genre, game-developer, game-publisher">
+				<origin>0 0</origin>
+				<fontPath>${robotoItalic}</fontPath>
+			</text>
+			
+			<image name="game-platform-line, game-releasedate-line, game-genre-line, game-developer-line">
+				<origin>0 0</origin>
+				<size>0.02 0.00225</size>
+				<path>${spacerImage}</path>
+				<tile>true</tile>
+				<color>${purple}</color>
+				<zIndex>10</zIndex>
+			</image>
+			
+			<text name="game-platform-label">
+				<pos>0.04 0.61</pos>
+				<text>Platform</text>
+			</text>
+			<text name="game-platform">
+				<pos>0.04 0.615</pos>
+				<text>${systemName}</text>
+			</text>
+			<image name="game-platform-line">
+				<pos>0.04 0.645</pos>
+			</image>
+			
+			<text name="game-releasedate-label">
+				<pos>0.04 0.675</pos>
+				<text>Released</text>
+			</text>
+			<datetime name="game-releasedate">
+				<origin>0 0</origin>
+				<pos>0.04 0.680</pos>
+				<size>0.21 0.02</size>
+				<metadata>releasedate</metadata>
+				<color>${foreground}</color>
+				<format>%Y</format>
+				<fontSize>${fontSizeCaption}</fontSize>
+				<fontPath>${robotoItalic}</fontPath>
+				<lineSpacing>1.1</lineSpacing>
+			</datetime>
+			<image name="game-releasedate-line">
+				<pos>0.04 0.710</pos>
+			</image>
+			
+			<text name="game-genre-label">
+				<pos>0.04 0.740</pos>
+				<text>Genre</text>
+			</text>
+			<text name="game-genre">
+				<pos>0.04 0.745</pos>
+				<metadata>genre</metadata>
+			</text>
+			<image name="game-genre-line">
+				<pos>0.04 0.775</pos>
+			</image>
+			
+			<text name="game-developer-label">
+				<pos>0.04 0.805</pos>
+				<text>Developer</text>
+			</text>
+			<text name="game-developer">
+				<pos>0.04 0.810</pos>
+				<metadata>developer</metadata>
+			</text>
+			<image name="game-developer-line">
+				<pos>0.04 0.84</pos>
+			</image>
+			
+			<text name="game-publisher-label">
+				<pos>0.04 0.875</pos>
+				<text>Publisher</text>
+			</text>
+			<text name="game-publisher">
+				<pos>0.04 0.880</pos>
+				<metadata>publisher</metadata>
+			</text>
+
+
+			<systemstatus name="system-status">
+				<backgroundColor>${background}</backgroundColor>
+				<backgroundVerticalPadding>0.00972 0.00972</backgroundVerticalPadding>
+			</systemstatus>
+			
+		</view>
+	</variant>
+	
+	<variant name="gamelist-screenshot">
+		<view name="gamelist">
+			<video name="game-background-video">
+				<visible>false</visible>
+			</video>
+		</view>
+	</variant>
+	
+	<variant name="gamelist-video-instant, gamelist-video-delay">
+		<view name="gamelist">
+			<image name="game-background">
+				<visible>false</visible>
+			</image>
+		</view>
+	</variant>
+	
+	<variant name="gamelist-video-delay">
+		<view name="gamelist">
+			<video name="game-background-video">
+				<delay>2</delay>
+			</video>
+		</view>
+	</variant>
+	
+	<!--
+	///
+	Font Size
+	///
+	-->
+	<fontSize name="small">
+		<variables>
+			<fontSizeH2>0.045</fontSizeH2>
+			<fontSizeH3>0.0325</fontSizeH3> 
+			<fontSizeBody>0.030</fontSizeBody>
+			<fontSizeIcons>0.0275</fontSizeIcons>			
+			<fontSizeCaption>0.020</fontSizeCaption>
+		</variables>
+	</fontSize>
+	<fontSize name="medium">
+		<variables>
+			<fontSizeH2>0.0475</fontSizeH2>
+			<fontSizeH3>0.035</fontSizeH3>
+			<fontSizeBody>0.0325</fontSizeBody>
+			<fontSizeIcons>0.030</fontSizeIcons> 
+			<fontSizeCaption>0.0225</fontSizeCaption>
+		</variables>
+	</fontSize>
+	<fontSize name="large">
+		<variables>
+			<fontSizeH2>0.05</fontSizeH2>
+			<fontSizeH3>0.0375</fontSizeH3>
+			<fontSizeBody>0.035</fontSizeBody>
+			<fontSizeIcons>0.0325</fontSizeIcons> 
+			<fontSizeCaption>0.025</fontSizeCaption>
+		</variables>
+	</fontSize>
+	
+	<!--
+	///
+	Aspect Ratios
+	///
+	-->
+	<aspectRatio name="1:1">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00694 0.00694</backgroundHorizontalPadding>
+			</systemstatus>
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="5:4">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00556 0.00556</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="4:3">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00521 0.00521</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="3:2">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00463 0.00463</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="16:10">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00434 0.00434</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="16:9">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00391 0.00391</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="19.5:9">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00321 0.00321</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+	<aspectRatio name="21:9">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b,x,y</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00298 0.00298</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+
+    <aspectRatio name="8:7">
+        <view name="gamelist">
+			<helpsystem name="help">
+				<entries>back,start,a,b</entries>
+			</helpsystem>
+			<systemstatus name="system-status">
+				<backgroundHorizontalPadding>0.00605 0.00605</backgroundHorizontalPadding>
+			</systemstatus>			
+		</view>
+    </aspectRatio>
+	
+</theme>

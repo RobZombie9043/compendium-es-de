@@ -1,0 +1,85 @@
+<themeCapabilities>
+   
+	<themeName>Compendium</themeName>
+   
+	<!--
+	///
+	Aspect Ratios
+	///
+	-->
+	<aspectRatio>1:1</aspectRatio>
+	<aspectRatio>8:7</aspectRatio>
+	<aspectRatio>5:4</aspectRatio>
+	<aspectRatio>4:3</aspectRatio>
+	<aspectRatio>3:2</aspectRatio>
+	<aspectRatio>16:10</aspectRatio>
+	<aspectRatio>16:9</aspectRatio>
+	<aspectRatio>19.5:9</aspectRatio>
+	<aspectRatio>21:9</aspectRatio>
+	
+	
+	<!--
+	///
+	Font Size
+	///
+	-->
+	<fontSize>small</fontSize>
+	<fontSize>medium</fontSize>
+	<fontSize>large</fontSize>
+	
+	
+	<!--
+	///
+	Transitions
+	///
+	-->
+	<transitions name="transitions">
+		<label>transitions</label>
+		<selectable>false</selectable>
+		<systemToSystem>instant</systemToSystem>
+		<systemToGamelist>instant</systemToGamelist>
+		<gamelistToGamelist>instant</gamelistToGamelist>
+		<gamelistToSystem>instant</gamelistToSystem>
+		<startupToSystem>fade</startupToSystem>
+		<startupToGamelist>fade</startupToGamelist>
+	</transitions>
+	<suppressTransitionProfiles>
+		<entry>builtin-instant</entry>
+		<entry>builtin-slide</entry>
+		<entry>builtin-fade</entry>
+	</suppressTransitionProfiles>
+   
+	<!--
+	///
+	Variants
+	///
+	-->
+	<variant name="gamelist-screenshot">
+		<label>Screenshot</label>
+		<selectable>true</selectable>
+	</variant>
+	
+	<variant name="gamelist-video-instant">
+		<label>Video (instant)</label>
+		<selectable>true</selectable>
+	</variant>
+	
+	<variant name="gamelist-video-delay">
+		<label>Video (delay)</label>
+		<selectable>true</selectable>
+	</variant>
+		
+	
+	<!--
+	///
+	Color Schemes
+	///
+	-->
+	<colorScheme name="dracula">
+        <label>Dracula</label>
+    </colorScheme>
+	<colorScheme name="alucard">
+        <label>Alucard</label>
+    </colorScheme>
+	
+</themeCapabilities>
