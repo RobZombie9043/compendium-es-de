@@ -111,6 +111,9 @@ license:      	creative commons CC-BY-NC-SA
 			<horizontalAlignment>right</horizontalAlignment>
 			<fontPath>${robotoBold}</fontPath>
 			<color>${purple}</color>
+			<container>true</container>
+			<containerType>horizontal</containerType>
+			<containerScrollGap>1</containerScrollGap>
 		</text>
 		<text name="systemName">
             <text>${system.fullName.noCollections}</text>
