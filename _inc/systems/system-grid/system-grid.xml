@@ -10,6 +10,17 @@
 		</variables>	
 	</aspectRatio>	
 	
+	<aspectRatio name="8:7">	
+		<variables>	
+			<sysGridSize>0.8130 0.55</sysGridSize>
+			<sysGridItemSize>0.1451 0.1666</sysGridItemSize>
+			<sysGridItemSpacing>0.021774 0.025</sysGridItemSpacing>
+			<sysIconPos>0.093548 0.703704</sysIconPos>
+			<sysNamePos>0.906452 0.787037</sysNamePos>
+			<sysNameSizeX>0.645968</sysNameSizeX>
+		</variables>	
+	</aspectRatio>	
+	
 	<aspectRatio name="5:4">	
 		<variables>	
 			<sysGridSize>0.9001 0.55</sysGridSize>
@@ -87,14 +98,14 @@
 		</variables>	
 	</aspectRatio>	
 	
-	<aspectRatio name="8:7">	
+	<aspectRatio name="32:9">	
 		<variables>	
-			<sysGridSize>0.8130 0.55</sysGridSize>
-			<sysGridItemSize>0.1451 0.1666</sysGridItemSize>
-			<sysGridItemSpacing>0.021774 0.025</sysGridItemSpacing>
-			<sysIconPos>0.093548 0.703704</sysIconPos>
-			<sysNamePos>0.906452 0.787037</sysNamePos>
-			<sysNameSizeX>0.645968</sysNameSizeX>
+			<sysGridSize>0.8555 0.4862</sysGridSize>
+			<sysGridItemSize>0.0648 0.2305</sysGridItemSize>
+			<sysGridItemSpacing>0.007031 0.025</sysGridItemSpacing>
+			<sysIconPos>0.072266 0.639815</sysIconPos>
+			<sysNamePos>0.927734 0.755092</sysNamePos>
+			<sysNameSizeX>0.783594</sysNameSizeX>
 		</variables>	
 	</aspectRatio>	
 
