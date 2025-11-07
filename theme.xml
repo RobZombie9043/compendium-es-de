@@ -220,19 +220,19 @@ license:      	creative commons CC-BY-NC-SA
 				<fontPath>${robotoRegular}</fontPath>
 			</text>
 			
-			<text name="game-platform-label, game-platform, game-releasedate-label, game-genre-label, game-genre, game-developer-label, game-developer, game-publisher-label, game-publisher">
+			<text name="game-platform-label, game-platform, game-releasedate-label, game-genre-label, game-genre, game-developer-label, game-developer, game-playtime-label, game-playtime">
 				<size>0.21 0.02</size>
 				<color>${foreground}</color>
 				<fontSize>${fontSizeCaption}</fontSize>
 				<lineSpacing>1.1</lineSpacing>
 			</text>
 			
-			<text name="game-platform-label, game-releasedate-label, game-genre-label, game-developer-label, game-publisher-label">
+			<text name="game-platform-label, game-releasedate-label, game-genre-label, game-developer-label, game-playtime-label">
 				<origin>0 1</origin>
 				<fontPath>${robotoBold}</fontPath>
 			</text>
 			
-			<text name="game-platform, game-genre, game-developer, game-publisher">
+			<text name="game-platform, game-genre, game-developer, game-playtime">
 				<origin>0 0</origin>
 				<fontPath>${robotoItalic}</fontPath>
 			</text>
@@ -301,13 +301,13 @@ license:      	creative commons CC-BY-NC-SA
 				<pos>0.04 0.84</pos>
 			</image>
 			
-			<text name="game-publisher-label">
+			<text name="game-playtime-label">
 				<pos>0.04 0.875</pos>
-				<text>Publisher</text>
+				<text>Play Time</text>
 			</text>
-			<text name="game-publisher">
+			<text name="game-playtime">
 				<pos>0.04 0.880</pos>
-				<metadata>publisher</metadata>
+				<metadata>playtime</metadata>
 			</text>
 
 
@@ -478,6 +478,11 @@ license:      	creative commons CC-BY-NC-SA
 				<backgroundHorizontalPadding>0.00605 0.00605</backgroundHorizontalPadding>
 			</systemstatus>			
 		</view>
+		<fontSize name="large">
+			<variables>
+				<fontSizeH3>0.03</fontSizeH3>
+			</variables>
+		</fontSize>
     </aspectRatio>
 	
 </theme>
